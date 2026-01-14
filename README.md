@@ -24,8 +24,12 @@ From the `code` folder, run:
 
 The program uses the provided dataset which you can find [here](https://www.kaggle.com/datasets/raedaddala/top-500-600-movies-of-each-year-from-1960-to-2024/data).
 The file dataset.parquet is used for the algorithm. If you use your own dataset, it must contain the fields "duration", "rating", "release_date", "genres", "directors", "stars", "keywords", "description"
+
 If you wish to use tagmaker.py, run 
 
-`python tagmaker.py --input-csv dataset.csv --output-csv out.csv --description-column description --keywords-column keywords`
+`python tagmaker.py --input-csv your_dataset.csv --output-csv your_output.csv --description-column description_column_name --keywords-column keywords_column_name`
+
+
+
 
 
