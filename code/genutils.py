@@ -178,7 +178,8 @@ def geneticAlgorithm(userInput:dict, toolbox, pop_size=100, cxpb=0.2, mutpb=0.02
         offspring = list(map(toolbox.clone, offspring))
 
         # Apply crossover
-        for child1, child2 in zip(offspring[::2], offspring[1::2]):
+        # zip does pairwise iteration over the offspring list and crossover is applied to each pair
+        for child1, child2 in zip(offspring[::2], offspring[1::2]): #offspring[::2] gives even indexed, offspring[1::2] gives odd indexed
             if random.random() < cxpb:
                 toolbox.mate(child1, child2, indpb = 0.5)
                 del child1.fitness.values
