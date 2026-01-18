@@ -1,20 +1,9 @@
-import tkinter as tk
-from tkinter import messagebox, ttk
-from deap import base, creator, tools
-import pandas as pd
-import random
-import re
-import numpy as np
-import random
-import genutils as gu
-import datareader as dr
+import threading
 from genutils import geneticAlgorithm, getToolbox
-import graphics
 from graphics import promptGeneticInputs, promptUserPreference, SimpleLoadingScreen, MovieExplanationGUI
 from datareader import extractPreferences
-import secondphase
 from secondphase import runSecondPhase
-import threading
+
 
 pop_size= 150
 cxpb= 0.7
@@ -73,6 +62,7 @@ finalResult = runSecondPhase(firstPhaseResults, secondPhaseInput)
 MovieExplanationGUI(finalResult[0], preferences)
 
 print(finalResult)
+
 
 
 
