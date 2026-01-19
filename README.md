@@ -9,6 +9,8 @@ This repository contains a small genetic-algorithm-based movie recommender GUI.
 - numpy
 - deap
 - spacy
+- PyArrow
+- FastParquet
 
 Optional (for `tagmaker.py`):
 
@@ -28,6 +30,7 @@ The file dataset.parquet is used for the algorithm. If you use your own dataset,
 If you wish to use tagmaker.py, run 
 
 `python tagmaker.py --input-csv your_dataset.csv --output-csv your_output.csv --description-column description_column_name --keywords-column keywords_column_name`
+
 
 
 
